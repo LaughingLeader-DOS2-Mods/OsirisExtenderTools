@@ -1,0 +1,1 @@
+G:/Modding/DOS2DE/Projects_Source/DivinityTools/Scripts/dos2de_lua_generatedefinitions.py

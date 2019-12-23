@@ -1,0 +1,705 @@
+	
+---@param Message string
+function NRD_DebugLog(Message) end
+	
+---@param Event string
+---@param Count integer
+function NRD_ForLoop(Event, Count) end
+	
+---@param Object string
+---@param Event string
+---@param Count integer
+function NRD_ForLoop(Object, Event, Count) end
+	
+---@param ObjectGuid string
+---@param Event string
+function NRD_IterateStatuses(ObjectGuid, Event) end
+	
+---@param Object string
+---@param StatusHandle integer
+---@param Attribute string
+---@param Value integer
+function NRD_StatusSetInt(Object, StatusHandle, Attribute, Value) end
+	
+---@param Object string
+---@param StatusHandle integer
+---@param Attribute string
+---@param Value number
+function NRD_StatusSetReal(Object, StatusHandle, Attribute, Value) end
+	
+---@param Object string
+---@param StatusHandle integer
+---@param Attribute string
+---@param Value string
+function NRD_StatusSetString(Object, StatusHandle, Attribute, Value) end
+	
+---@param Object string
+---@param StatusHandle integer
+---@param Attribute string
+---@param Value string
+function NRD_StatusSetGuidString(Object, StatusHandle, Attribute, Value) end
+	
+---@param Object string
+---@param StatusHandle integer
+---@param Attribute string
+---@param X number
+---@param Y number
+---@param Z number
+function NRD_StatusSetVector3(Object, StatusHandle, Attribute, X, Y, Z) end
+	
+---@param Object string
+---@param StatusHandle integer
+---@param PreventApply integer
+function NRD_StatusPreventApply(Object, StatusHandle, PreventApply) end
+	
+---@param GameActionHandle integer
+function NRD_GameActionDestroy(GameActionHandle) end
+	
+---@param GameActionHandle integer
+---@param LifeTime number
+function NRD_GameActionSetLifeTime(GameActionHandle, LifeTime) end
+	
+
+function NRD_ProjectilePrepareLaunch() end
+	
+
+function NRD_ProjectileLaunch() end
+	
+---@param Property string
+---@param Value integer
+function NRD_ProjectileSetInt(Property, Value) end
+	
+---@param Property string
+---@param Value string
+function NRD_ProjectileSetString(Property, Value) end
+	
+---@param Property string
+---@param X number
+---@param Y number
+---@param Z number
+function NRD_ProjectileSetVector3(Property, X, Y, Z) end
+	
+---@param Property string
+---@param Value string
+function NRD_ProjectileSetGuidString(Property, Value) end
+	
+---@param HitHandle integer
+function NRD_HitExecute(HitHandle) end
+	
+---@param HitHandle integer
+---@param Property string
+---@param Value integer
+function NRD_HitSetInt(HitHandle, Property, Value) end
+	
+---@param HitHandle integer
+---@param Property string
+---@param Value string
+function NRD_HitSetString(HitHandle, Property, Value) end
+	
+---@param HitHandle integer
+---@param Property string
+---@param X number
+---@param Y number
+---@param Z number
+function NRD_HitSetVector3(HitHandle, Property, X, Y, Z) end
+	
+---@param HitHandle integer
+function NRD_HitClearAllDamage(HitHandle) end
+	
+---@param HitHandle integer
+---@param DamageType string
+function NRD_HitClearDamage(HitHandle, DamageType) end
+	
+---@param HitHandle integer
+---@param DamageType string
+---@param Amount integer
+function NRD_HitAddDamage(HitHandle, DamageType, Amount) end
+	
+---@param Object string
+---@param StatusHandle integer
+function NRD_HitStatusClearAllDamage(Object, StatusHandle) end
+	
+---@param Object string
+---@param StatusHandle integer
+---@param DamageType string
+function NRD_HitStatusClearDamage(Object, StatusHandle, DamageType) end
+	
+---@param Object string
+---@param StatusHandle integer
+---@param DamageType string
+---@param Amount integer
+function NRD_HitStatusAddDamage(Object, StatusHandle, DamageType, Amount) end
+	
+---@param Character string
+---@param SkillId string
+---@param Cooldown number
+function NRD_SkillSetCooldown(Character, SkillId, Cooldown) end
+	
+---@param Character string
+---@param Slot integer
+---@param SkillId string
+function NRD_SkillBarSetSkill(Character, Slot, SkillId) end
+	
+---@param Character string
+---@param Slot integer
+---@param Item string
+function NRD_SkillBarSetItem(Character, Slot, Item) end
+	
+---@param Character string
+---@param Slot integer
+function NRD_SkillBarClear(Character, Slot) end
+	
+---@param Player string
+---@param Attribute string
+---@param Value integer
+function NRD_PlayerSetBaseAttribute(Player, Attribute, Value) end
+	
+---@param Player string
+---@param Ability string
+---@param Value integer
+function NRD_PlayerSetBaseAbility(Player, Ability, Value) end
+	
+---@param Player string
+---@param Talent string
+---@param HasTalent integer
+function NRD_PlayerSetBaseTalent(Player, Talent, HasTalent) end
+	
+---@param Player string
+---@param Property string
+---@param Value integer
+function NRD_PlayerSetCustomDataInt(Player, Property, Value) end
+	
+---@param Player string
+---@param Property string
+---@param Value string
+function NRD_PlayerSetCustomDataString(Player, Property, Value) end
+	
+---@param Item string
+---@param EventName string
+function NRD_ItemIterateDeltaModifiers(Item, EventName) end
+	
+---@param Item string
+---@param IsIdentified integer
+function NRD_ItemSetIdentified(Item, IsIdentified) end
+	
+---@param Item string
+---@param Stat string
+---@param Value integer
+function NRD_ItemSetPermanentBoostInt(Item, Stat, Value) end
+	
+---@param Item string
+---@param Stat string
+---@param Value number
+function NRD_ItemSetPermanentBoostReal(Item, Stat, Value) end
+	
+---@param Item string
+function NRD_ItemCloneBegin(Item) end
+	
+---@param Property string
+---@param Value integer
+function NRD_ItemCloneSetInt(Property, Value) end
+	
+---@param Property string
+---@param Value string
+function NRD_ItemCloneSetString(Property, Value) end
+	
+---@param Character string
+---@param Stat string
+---@param Value integer
+function NRD_CharacterSetStatInt(Character, Stat, Value) end
+	
+---@param Character string
+---@param Stat string
+---@param Value integer
+function NRD_CharacterSetPermanentBoostInt(Character, Stat, Value) end
+	
+---@param Character string
+---@param Talent string
+---@param IsDisabled integer
+function NRD_CharacterDisableTalent(Character, Talent, IsDisabled) end
+	
+---@param Character string
+---@param IsGlobal integer
+function NRD_CharacterSetGlobal(Character, IsGlobal) end
+	
+---@param Character string
+---@param StatId string
+---@param Value integer
+function NRD_CharacterSetCustomStat(Character, StatId, Value) end
+	
+---@param BootstrapMods integer
+function NRD_LuaReset(BootstrapMods) end
+	
+---@param ModNameGuid string
+---@param FileName string
+function NRD_LuaLoad(ModNameGuid, FileName) end
+	
+---@param Func string
+function NRD_LuaCall(Func) end
+	
+---@param Func string
+---@param Arg1 string
+function NRD_LuaCall(Func, Arg1) end
+	
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+function NRD_LuaCall(Func, Arg1, Arg2) end
+	
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+function NRD_LuaCall(Func, Arg1, Arg2, Arg3) end
+	
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+function NRD_LuaCall(Func, Arg1, Arg2, Arg3, Arg4) end
+	
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+function NRD_LuaCall(Func, Arg1, Arg2, Arg3, Arg4, Arg5) end
+	
+---@param Character string
+function NRD_BreakOnCharacter(Character) end
+	
+---@param Item string
+function NRD_BreakOnItem(Item) end
+	
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+function NRD_Experiment(Arg1, Arg2, Arg3) end
+	
+---@param Message string
+function NRD_ShowErrorMessage(Message) end
+	
+---@param Path string
+---@param Contents string
+function NRD_SaveFile(Path, Contents) end
+	
+---@param A string
+---@param B string
+---@return integer
+function NRD_StringCompare(A, B) end
+	
+---@param String string
+---@return integer
+function NRD_StringLength(String) end
+	
+---@param String string
+---@return integer
+function NRD_StringToInt(String) end
+	
+---@param String string
+---@return number
+function NRD_StringToReal(String) end
+	
+---@param Real number
+---@return string
+function NRD_RealToString(Real) end
+	
+---@param Min number
+---@param Max number
+---@return number
+function NRD_RandomReal(Min, Max) end
+	
+---@param In integer
+---@return integer
+function NRD_Factorial(In) end
+	
+---@param Base number
+---@param Exp integer
+---@return number
+function NRD_Pow(Base, Exp) end
+	
+---@param In number
+---@return number
+function NRD_Sin(In) end
+	
+---@param In number
+---@return number
+function NRD_Cos(In) end
+	
+---@param In number
+---@return number
+function NRD_Tan(In) end
+	
+---@param In number
+---@return number
+function NRD_Round(In) end
+	
+---@param In number
+---@return number
+function NRD_Ceil(In) end
+	
+---@param In number
+---@return number
+function NRD_Floor(In) end
+	
+---@param In number
+---@return number
+function NRD_Abs(In) end
+	
+---@param In number
+---@return number
+function NRD_Sqrt(In) end
+	
+---@param In number
+---@return number
+function NRD_Exp(In) end
+	
+---@param In number
+---@return number
+function NRD_Log(In) end
+	
+---@param Numerator integer
+---@param Denominator integer
+---@return integer
+function NRD_IsDivisible(Numerator, Denominator) end
+	
+---@param StatsId string
+function NRD_StatExists(StatsId) end
+	
+---@param StatsId string
+---@param Attribute string
+function NRD_StatAttributeExists(StatsId, Attribute) end
+	
+---@param StatsId string
+---@param Attribute string
+---@return integer
+function NRD_StatGetInt(StatsId, Attribute) end
+	
+---@param StatsId string
+---@param Attribute string
+---@return string
+function NRD_StatGetString(StatsId, Attribute) end
+	
+---@param StatsId string
+---@return string
+function NRD_StatGetType(StatsId) end
+	
+---@param Object string
+---@param StatusId string
+---@return integer
+function NRD_StatusGetHandle(Object, StatusId) end
+	
+---@param Object string
+---@param StatusHandle integer
+---@param Attribute string
+---@return integer
+function NRD_StatusGetInt(Object, StatusHandle, Attribute) end
+	
+---@param Object string
+---@param StatusHandle integer
+---@param Attribute string
+---@return number
+function NRD_StatusGetReal(Object, StatusHandle, Attribute) end
+	
+---@param Object string
+---@param StatusHandle integer
+---@param Attribute string
+---@return string
+function NRD_StatusGetString(Object, StatusHandle, Attribute) end
+	
+---@param Object string
+---@param StatusHandle integer
+---@param Attribute string
+---@return string
+function NRD_StatusGetGuidString(Object, StatusHandle, Attribute) end
+	
+---@param Character string
+---@param StatusId string
+---@param LifeTime number
+---@return integer
+function NRD_ApplyActiveDefense(Character, StatusId, LifeTime) end
+	
+---@param Character string
+---@param StatusId string
+---@param SourceCharacter string
+---@param LifeTime number
+---@param DistancePerDamage number
+---@return integer
+function NRD_ApplyDamageOnMove(Character, StatusId, SourceCharacter, LifeTime, DistancePerDamage) end
+	
+---@param OwnerCharacter string
+---@param SkillId string
+---@param X number
+---@param Y number
+---@param Z number
+---@return integer
+function NRD_CreateRain(OwnerCharacter, SkillId, X, Y, Z) end
+	
+---@param OwnerCharacter string
+---@param SkillId string
+---@param X number
+---@param Y number
+---@param Z number
+---@return integer
+function NRD_CreateStorm(OwnerCharacter, SkillId, X, Y, Z) end
+	
+---@param OwnerCharacter string
+---@param SkillId string
+---@param SourceX number
+---@param SourceY number
+---@param SourceZ number
+---@param TargetX number
+---@param TargetY number
+---@param TargetZ number
+---@return integer
+function NRD_CreateWall(OwnerCharacter, SkillId, SourceX, SourceY, SourceZ, TargetX, TargetY, TargetZ) end
+	
+---@param OwnerCharacter string
+---@param SkillId string
+---@param PositionX number
+---@param PositionY number
+---@param PositionZ number
+---@param TargetX number
+---@param TargetY number
+---@param TargetZ number
+---@return integer
+function NRD_CreateTornado(OwnerCharacter, SkillId, PositionX, PositionY, PositionZ, TargetX, TargetY, TargetZ) end
+	
+---@param OwnerCharacter string
+---@param SkillId string
+---@param X number
+---@param Y number
+---@param Z number
+---@return integer
+function NRD_CreateDome(OwnerCharacter, SkillId, X, Y, Z) end
+	
+---@param TargetCharacter string
+---@param X number
+---@param Y number
+---@param Z number
+---@param BeamEffectName string
+---@param CasterCharacter string
+---@return integer
+function NRD_CreateGameObjectMove(TargetCharacter, X, Y, Z, BeamEffectName, CasterCharacter) end
+	
+---@param GameActionHandle integer
+---@return number
+function NRD_GameActionGetLifeTime(GameActionHandle) end
+	
+---@param OwnerCharacter string
+---@param Template string
+---@param X number
+---@param Y number
+---@param Z number
+---@param Lifetime number
+---@param Level integer
+---@param IsTotem integer
+---@param MapToAiGrid integer
+---@return string
+function NRD_Summon(OwnerCharacter, Template, X, Y, Z, Lifetime, Level, IsTotem, MapToAiGrid) end
+	
+---@param Target string
+---@param Source string
+---@return integer
+function NRD_HitPrepare(Target, Source) end
+	
+---@param HitHandle integer
+---@return integer
+function NRD_HitQryExecute(HitHandle) end
+	
+---@param HitHandle integer
+---@param Property string
+---@return integer
+function NRD_HitGetInt(HitHandle, Property) end
+	
+---@param HitHandle integer
+---@param Property string
+---@return string
+function NRD_HitGetString(HitHandle, Property) end
+	
+---@param HitHandle integer
+---@param DamageType string
+---@return integer
+function NRD_HitGetDamage(HitHandle, DamageType) end
+	
+---@param Object string
+---@param StatusHandle integer
+---@param DamageType string
+---@return integer
+function NRD_HitStatusGetDamage(Object, StatusHandle, DamageType) end
+	
+---@param Character string
+---@param SkillId string
+---@return number
+function NRD_SkillGetCooldown(Character, SkillId) end
+	
+---@param Character string
+---@param Slot integer
+---@return string
+function NRD_SkillBarGetItem(Character, Slot) end
+	
+---@param Character string
+---@param Slot integer
+---@return string
+function NRD_SkillBarGetSkill(Character, Slot) end
+	
+---@param Character string
+---@param Skill string
+---@return integer
+function NRD_SkillBarFindSkill(Character, Skill) end
+	
+---@param Character string
+---@param Item string
+---@return integer
+function NRD_SkillBarFindItem(Character, Item) end
+	
+---@param Player string
+---@param Property string
+---@return integer
+function NRD_PlayerGetCustomDataInt(Player, Property) end
+	
+---@param Player string
+---@param Property string
+---@return string
+function NRD_PlayerGetCustomDataString(Player, Property) end
+	
+---@param Item string
+---@return string
+function NRD_ItemGetStatsId(Item) end
+	
+---@param Item string
+---@return string
+---@return string
+---@return integer
+function NRD_ItemGetGenerationParams(Item) end
+	
+---@param Item string
+---@return string
+---@return integer
+function NRD_ItemHasDeltaModifier(Item) end
+	
+---@param Item string
+---@param Stat string
+---@return integer
+function NRD_ItemGetPermanentBoostInt(Item, Stat) end
+	
+---@param Item string
+---@param Stat string
+---@return number
+function NRD_ItemGetPermanentBoostReal(Item, Stat) end
+	
+---@return string
+function NRD_ItemClone() end
+	
+---@param Character string
+---@param Stat string
+---@param IsBaseStat integer
+---@return integer
+function NRD_CharacterGetComputedStat(Character, Stat, IsBaseStat) end
+	
+---@param Attacker string
+---@param Target string
+---@return integer
+function NRD_CharacterGetHitChance(Attacker, Target) end
+	
+---@param Character string
+---@param Stat string
+---@return integer
+function NRD_CharacterGetStatInt(Character, Stat) end
+	
+---@param Character string
+---@param Stat string
+---@return integer
+function NRD_CharacterGetPermanentBoostInt(Character, Stat) end
+	
+---@param Character string
+---@param Talent string
+---@return integer
+function NRD_CharacterIsTalentDisabled(Character, Talent) end
+	
+---@param Character string
+---@param Attribute string
+---@return integer
+function NRD_CharacterGetInt(Character, Attribute) end
+	
+---@param Character string
+---@param Attribute string
+---@return number
+function NRD_CharacterGetReal(Character, Attribute) end
+	
+---@param Character string
+---@param Attribute string
+---@return string
+function NRD_CharacterGetString(Character, Attribute) end
+	
+---@param Character string
+---@param StatId string
+---@return integer
+function NRD_CharacterGetCustomStat(Character, StatId) end
+	
+---@param Name string
+---@param Description string
+---@return string
+function NRD_CreateCustomStat(Name, Description) end
+	
+---@param Name string
+---@return string
+function NRD_GetCustomStat(Name) end
+	
+---@param Func string
+function NRD_LuaQuery0(Func) end
+	
+---@param Func string
+---@return string
+function NRD_LuaQuery0(Func) end
+	
+---@param Func string
+---@param Arg1 string
+---@return string
+function NRD_LuaQuery1(Func, Arg1) end
+	
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+function NRD_LuaQuery2(Func, Arg1, Arg2) end
+	
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@return string
+function NRD_LuaQuery2(Func, Arg1, Arg2) end
+	
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@return string
+---@return string
+function NRD_LuaQuery2(Func, Arg1, Arg2) end
+	
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@return string
+function NRD_LuaQuery3(Func, Arg1, Arg2, Arg3) end
+	
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@return string
+function NRD_LuaQuery4(Func, Arg1, Arg2, Arg3, Arg4) end
+	
+---@param ModUuid string
+---@return integer
+function NRD_IsModLoaded(ModUuid) end
+	
+---@return integer
+function NRD_GetVersion() end
+	
+---@param Path string
+---@return string
+function NRD_LoadFile(Path) end
