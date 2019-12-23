@@ -17,7 +17,8 @@ These definitions are all the story (Osiris) functions for [Divinity: Original S
 	"Path/To/definitions": true
 },
 ```
-5. Replace "Path/To/definitions" with the path to your lua definitions folder from this repository. **Replace forward slashes `\` with backslashes `/`.**
+1. Replace "Path/To/definitions" with the path to your lua definitions folder from this repository, i.e. "C:/DivinityTools/OsirisExtenderTools/definitions".  
+**Replace backslashes `\` with forward slashes `/`.**
 6. Reload VSCode if you already have your mod's lua file(s) open.
 
 ### Workspaces with Multiple Root Folders
@@ -32,7 +33,8 @@ If your workspace contains different root folders, you may need to add this same
 	"Path/To/definitions": true
 },
 ```
-3. Replace "Path/To/definitions" with the path to your lua definitions folder from this repository. **Replace forward slashes `\` with backslashes `/`.**
+3. Replace "Path/To/definitions" with the path to your lua definitions folder from this repository.  
+**Replace backslashes `\` with forward slashes `/`.**
 4. Reload VSCode if you already have your mod's lua file(s) open.
 
 The folder you'll want to do this for is the one that contains your lua files. This can also be done for the workspace (Preferences -> Workspace).
