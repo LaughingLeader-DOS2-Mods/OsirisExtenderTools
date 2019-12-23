@@ -10,7 +10,7 @@ These definitions are all the story (Osiris) functions for [Divinity: Original S
 1. Download this repository (Clone or Download -> Download as zip) and extract it somewhere.
 2. [Install the vscode extension](https://marketplace.visualstudio.com/items?itemName=sumneko.lua).
 3. Find "Workspace: Library" under File -> Preferences -> User -> Extensions -> Lua settings (search for it), then click "Edit in settings.json".
-![https://i.imgur.com/l1O498x.png](https://i.imgur.com/l1O498x.png)
+![https://i.imgur.com/wWprpAj.png](https://i.imgur.com/wWprpAj.png)
 4. In your settings.json, paste the following:
 ```
 "Lua.workspace.library": {
