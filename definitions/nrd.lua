@@ -287,82 +287,82 @@ function NRD_SaveFile(Path, Contents) end
 	
 ---@param A string
 ---@param B string
----@return integer
+---@return integer Result
 function NRD_StringCompare(A, B) end
 	
 ---@param String string
----@return integer
+---@return integer Length
 function NRD_StringLength(String) end
 	
 ---@param String string
----@return integer
+---@return integer Result
 function NRD_StringToInt(String) end
 	
 ---@param String string
----@return number
+---@return number Result
 function NRD_StringToReal(String) end
 	
 ---@param Real number
----@return string
+---@return string Result
 function NRD_RealToString(Real) end
 	
 ---@param Min number
 ---@param Max number
----@return number
+---@return number Result
 function NRD_RandomReal(Min, Max) end
 	
 ---@param In integer
----@return integer
+---@return integer Out
 function NRD_Factorial(In) end
 	
 ---@param Base number
 ---@param Exp integer
----@return number
+---@return number Out
 function NRD_Pow(Base, Exp) end
 	
 ---@param In number
----@return number
+---@return number Out
 function NRD_Sin(In) end
 	
 ---@param In number
----@return number
+---@return number Out
 function NRD_Cos(In) end
 	
 ---@param In number
----@return number
+---@return number Out
 function NRD_Tan(In) end
 	
 ---@param In number
----@return number
+---@return number Out
 function NRD_Round(In) end
 	
 ---@param In number
----@return number
+---@return number Out
 function NRD_Ceil(In) end
 	
 ---@param In number
----@return number
+---@return number Out
 function NRD_Floor(In) end
 	
 ---@param In number
----@return number
+---@return number Out
 function NRD_Abs(In) end
 	
 ---@param In number
----@return number
+---@return number Out
 function NRD_Sqrt(In) end
 	
 ---@param In number
----@return number
+---@return number Out
 function NRD_Exp(In) end
 	
 ---@param In number
----@return number
+---@return number Out
 function NRD_Log(In) end
 	
 ---@param Numerator integer
 ---@param Denominator integer
----@return integer
+---@return integer Divisible
 function NRD_IsDivisible(Numerator, Denominator) end
 	
 ---@param StatsId string
@@ -374,51 +374,51 @@ function NRD_StatAttributeExists(StatsId, Attribute) end
 	
 ---@param StatsId string
 ---@param Attribute string
----@return integer
+---@return integer Value
 function NRD_StatGetInt(StatsId, Attribute) end
 	
 ---@param StatsId string
 ---@param Attribute string
----@return string
+---@return string Value
 function NRD_StatGetString(StatsId, Attribute) end
 	
 ---@param StatsId string
----@return string
+---@return string Type
 function NRD_StatGetType(StatsId) end
 	
 ---@param Object string
 ---@param StatusId string
----@return integer
+---@return integer StatusHandle
 function NRD_StatusGetHandle(Object, StatusId) end
 	
 ---@param Object string
 ---@param StatusHandle integer
 ---@param Attribute string
----@return integer
+---@return integer Value
 function NRD_StatusGetInt(Object, StatusHandle, Attribute) end
 	
 ---@param Object string
 ---@param StatusHandle integer
 ---@param Attribute string
----@return number
+---@return number Value
 function NRD_StatusGetReal(Object, StatusHandle, Attribute) end
 	
 ---@param Object string
 ---@param StatusHandle integer
 ---@param Attribute string
----@return string
+---@return string Value
 function NRD_StatusGetString(Object, StatusHandle, Attribute) end
 	
 ---@param Object string
 ---@param StatusHandle integer
 ---@param Attribute string
----@return string
+---@return string Value
 function NRD_StatusGetGuidString(Object, StatusHandle, Attribute) end
 	
 ---@param Character string
 ---@param StatusId string
 ---@param LifeTime number
----@return integer
+---@return integer StatusHandle
 function NRD_ApplyActiveDefense(Character, StatusId, LifeTime) end
 	
 ---@param Character string
@@ -426,7 +426,7 @@ function NRD_ApplyActiveDefense(Character, StatusId, LifeTime) end
 ---@param SourceCharacter string
 ---@param LifeTime number
 ---@param DistancePerDamage number
----@return integer
+---@return integer StatusHandle
 function NRD_ApplyDamageOnMove(Character, StatusId, SourceCharacter, LifeTime, DistancePerDamage) end
 	
 ---@param OwnerCharacter string
@@ -434,7 +434,7 @@ function NRD_ApplyDamageOnMove(Character, StatusId, SourceCharacter, LifeTime, D
 ---@param X number
 ---@param Y number
 ---@param Z number
----@return integer
+---@return integer GameObjectHandle
 function NRD_CreateRain(OwnerCharacter, SkillId, X, Y, Z) end
 	
 ---@param OwnerCharacter string
@@ -442,7 +442,7 @@ function NRD_CreateRain(OwnerCharacter, SkillId, X, Y, Z) end
 ---@param X number
 ---@param Y number
 ---@param Z number
----@return integer
+---@return integer GameObjectHandle
 function NRD_CreateStorm(OwnerCharacter, SkillId, X, Y, Z) end
 	
 ---@param OwnerCharacter string
@@ -453,7 +453,7 @@ function NRD_CreateStorm(OwnerCharacter, SkillId, X, Y, Z) end
 ---@param TargetX number
 ---@param TargetY number
 ---@param TargetZ number
----@return integer
+---@return integer GameObjectHandle
 function NRD_CreateWall(OwnerCharacter, SkillId, SourceX, SourceY, SourceZ, TargetX, TargetY, TargetZ) end
 	
 ---@param OwnerCharacter string
@@ -464,7 +464,7 @@ function NRD_CreateWall(OwnerCharacter, SkillId, SourceX, SourceY, SourceZ, Targ
 ---@param TargetX number
 ---@param TargetY number
 ---@param TargetZ number
----@return integer
+---@return integer GameObjectHandle
 function NRD_CreateTornado(OwnerCharacter, SkillId, PositionX, PositionY, PositionZ, TargetX, TargetY, TargetZ) end
 	
 ---@param OwnerCharacter string
@@ -472,7 +472,7 @@ function NRD_CreateTornado(OwnerCharacter, SkillId, PositionX, PositionY, Positi
 ---@param X number
 ---@param Y number
 ---@param Z number
----@return integer
+---@return integer GameObjectHandle
 function NRD_CreateDome(OwnerCharacter, SkillId, X, Y, Z) end
 	
 ---@param TargetCharacter string
@@ -481,11 +481,11 @@ function NRD_CreateDome(OwnerCharacter, SkillId, X, Y, Z) end
 ---@param Z number
 ---@param BeamEffectName string
 ---@param CasterCharacter string
----@return integer
+---@return integer GameObjectHandle
 function NRD_CreateGameObjectMove(TargetCharacter, X, Y, Z, BeamEffectName, CasterCharacter) end
 	
 ---@param GameActionHandle integer
----@return number
+---@return number LifeTime
 function NRD_GameActionGetLifeTime(GameActionHandle) end
 	
 ---@param OwnerCharacter string
@@ -497,167 +497,167 @@ function NRD_GameActionGetLifeTime(GameActionHandle) end
 ---@param Level integer
 ---@param IsTotem integer
 ---@param MapToAiGrid integer
----@return string
+---@return string Summon
 function NRD_Summon(OwnerCharacter, Template, X, Y, Z, Lifetime, Level, IsTotem, MapToAiGrid) end
 	
 ---@param Target string
 ---@param Source string
----@return integer
+---@return integer HitHandle
 function NRD_HitPrepare(Target, Source) end
 	
 ---@param HitHandle integer
----@return integer
+---@return integer StatusHandle
 function NRD_HitQryExecute(HitHandle) end
 	
 ---@param HitHandle integer
 ---@param Property string
----@return integer
+---@return integer Value
 function NRD_HitGetInt(HitHandle, Property) end
 	
 ---@param HitHandle integer
 ---@param Property string
----@return string
+---@return string Value
 function NRD_HitGetString(HitHandle, Property) end
 	
 ---@param HitHandle integer
 ---@param DamageType string
----@return integer
+---@return integer Amount
 function NRD_HitGetDamage(HitHandle, DamageType) end
 	
 ---@param Object string
 ---@param StatusHandle integer
 ---@param DamageType string
----@return integer
+---@return integer Amount
 function NRD_HitStatusGetDamage(Object, StatusHandle, DamageType) end
 	
 ---@param Character string
 ---@param SkillId string
----@return number
+---@return number Cooldown
 function NRD_SkillGetCooldown(Character, SkillId) end
 	
 ---@param Character string
 ---@param Slot integer
----@return string
+---@return string Item
 function NRD_SkillBarGetItem(Character, Slot) end
 	
 ---@param Character string
 ---@param Slot integer
----@return string
+---@return string Skill
 function NRD_SkillBarGetSkill(Character, Slot) end
 	
 ---@param Character string
 ---@param Skill string
----@return integer
+---@return integer Slot
 function NRD_SkillBarFindSkill(Character, Skill) end
 	
 ---@param Character string
 ---@param Item string
----@return integer
+---@return integer Slot
 function NRD_SkillBarFindItem(Character, Item) end
 	
 ---@param Player string
 ---@param Property string
----@return integer
+---@return integer Value
 function NRD_PlayerGetCustomDataInt(Player, Property) end
 	
 ---@param Player string
 ---@param Property string
----@return string
+---@return string Value
 function NRD_PlayerGetCustomDataString(Player, Property) end
 	
 ---@param Item string
----@return string
+---@return string StatsId
 function NRD_ItemGetStatsId(Item) end
 	
 ---@param Item string
----@return string
----@return string
----@return integer
+---@return string Base
+---@return string ItemType
+---@return integer Level
 function NRD_ItemGetGenerationParams(Item) end
 	
 ---@param Item string
----@return string
----@return integer
+---@return string DeltaMod
+---@return integer Count
 function NRD_ItemHasDeltaModifier(Item) end
 	
 ---@param Item string
 ---@param Stat string
----@return integer
+---@return integer Value
 function NRD_ItemGetPermanentBoostInt(Item, Stat) end
 	
 ---@param Item string
 ---@param Stat string
----@return number
+---@return number Value
 function NRD_ItemGetPermanentBoostReal(Item, Stat) end
 	
----@return string
+---@return string NewItem
 function NRD_ItemClone() end
 	
 ---@param Character string
 ---@param Stat string
 ---@param IsBaseStat integer
----@return integer
+---@return integer Value
 function NRD_CharacterGetComputedStat(Character, Stat, IsBaseStat) end
 	
 ---@param Attacker string
 ---@param Target string
----@return integer
+---@return integer HitChance
 function NRD_CharacterGetHitChance(Attacker, Target) end
 	
 ---@param Character string
 ---@param Stat string
----@return integer
+---@return integer Value
 function NRD_CharacterGetStatInt(Character, Stat) end
 	
 ---@param Character string
 ---@param Stat string
----@return integer
+---@return integer Value
 function NRD_CharacterGetPermanentBoostInt(Character, Stat) end
 	
 ---@param Character string
 ---@param Talent string
----@return integer
+---@return integer IsDisabled
 function NRD_CharacterIsTalentDisabled(Character, Talent) end
 	
 ---@param Character string
 ---@param Attribute string
----@return integer
+---@return integer Value
 function NRD_CharacterGetInt(Character, Attribute) end
 	
 ---@param Character string
 ---@param Attribute string
----@return number
+---@return number Value
 function NRD_CharacterGetReal(Character, Attribute) end
 	
 ---@param Character string
 ---@param Attribute string
----@return string
+---@return string Value
 function NRD_CharacterGetString(Character, Attribute) end
 	
 ---@param Character string
 ---@param StatId string
----@return integer
+---@return integer Value
 function NRD_CharacterGetCustomStat(Character, StatId) end
 	
 ---@param Name string
 ---@param Description string
----@return string
+---@return string StatId
 function NRD_CreateCustomStat(Name, Description) end
 	
 ---@param Name string
----@return string
+---@return string StatId
 function NRD_GetCustomStat(Name) end
 	
 ---@param Func string
 function NRD_LuaQuery0(Func) end
 	
 ---@param Func string
----@return string
+---@return string Out1
 function NRD_LuaQuery0(Func) end
 	
 ---@param Func string
 ---@param Arg1 string
----@return string
+---@return string Out1
 function NRD_LuaQuery1(Func, Arg1) end
 	
 ---@param Func string
@@ -668,21 +668,21 @@ function NRD_LuaQuery2(Func, Arg1, Arg2) end
 ---@param Func string
 ---@param Arg1 string
 ---@param Arg2 string
----@return string
+---@return string Out1
 function NRD_LuaQuery2(Func, Arg1, Arg2) end
 	
 ---@param Func string
 ---@param Arg1 string
 ---@param Arg2 string
----@return string
----@return string
+---@return string Out1
+---@return string Out2
 function NRD_LuaQuery2(Func, Arg1, Arg2) end
 	
 ---@param Func string
 ---@param Arg1 string
 ---@param Arg2 string
 ---@param Arg3 string
----@return string
+---@return string Out1
 function NRD_LuaQuery3(Func, Arg1, Arg2, Arg3) end
 	
 ---@param Func string
@@ -690,16 +690,16 @@ function NRD_LuaQuery3(Func, Arg1, Arg2, Arg3) end
 ---@param Arg2 string
 ---@param Arg3 string
 ---@param Arg4 string
----@return string
+---@return string Out1
 function NRD_LuaQuery4(Func, Arg1, Arg2, Arg3, Arg4) end
 	
 ---@param ModUuid string
----@return integer
+---@return integer IsLoaded
 function NRD_IsModLoaded(ModUuid) end
 	
----@return integer
+---@return integer Version
 function NRD_GetVersion() end
 	
 ---@param Path string
----@return string
+---@return string Contents
 function NRD_LoadFile(Path) end

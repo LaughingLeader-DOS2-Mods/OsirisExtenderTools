@@ -141,7 +141,7 @@ class QueryDefinition(CallDefinition):
 			params_doc += '\n'
 		for p in self.out:
 			i = i + 1
-			params_doc += "---@return {}".format(p.export_type())
+			params_doc += "---@return {} {}".format(p.export_type(), p.name)
 			if (i < count):
 				params_doc += '\n'
 		template = func_template
