@@ -1419,3 +1419,15 @@ function GetTextEventParamReal(Number) end
 ---@param Number integer
 ---@return string Value
 function GetTextEventParamUUID(Number) end
+	
+---@param Version string
+---@return integer Major
+---@return integer Minor
+---@return integer Revision
+---@return integer Build
+function LeaderLib_Ext_QRY_StringToVersion(Version) end
+	
+---@param VersionString string
+---@param Fallback integer
+---@return integer VersionInt
+function LeaderLib_Ext_QRY_VersionStringToVersionInteger(VersionString, Fallback) end
