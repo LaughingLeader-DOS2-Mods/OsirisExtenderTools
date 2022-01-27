@@ -695,6 +695,11 @@ function SetTagPriceModifier(Character, Tag, Modifier) end
 function CharacterResetCooldowns(Character) end
 	
 ---@param Character string
+---@param VisualSlot integer
+---@param ElementName string
+function CharacterSetVisualElement(Character, VisualSlot, ElementName) end
+	
+---@param Character string
 ---@param Type integer
 ---@param UIInstance string
 function CharacterShowStoryElementUI(Character, Type, UIInstance) end
@@ -969,7 +974,7 @@ function ItemMoveToTrigger(Item, Trigger, Speed, Acceleration, UseRotation, Even
 ---@param DoHits integer
 function ItemMoveToPosition(Item, X, Y, Z, Speed, Acceleration, Event, DoHits) end
 	
----@param UUID string
+---@param string string
 ---@param X number
 ---@param Y number
 ---@param Z number
@@ -978,7 +983,7 @@ function ItemMoveToPosition(Item, X, Y, Z, Speed, Acceleration, Event, DoHits) e
 ---@param Roll number
 ---@param Amount integer
 ---@param OwnerCharacter string
-function ItemToTransform(UUID, X, Y, Z, Pitch, Yaw, Roll, Amount, OwnerCharacter) end
+function ItemToTransform(string, X, Y, Z, Pitch, Yaw, Roll, Amount, OwnerCharacter) end
 	
 ---@param Item string
 ---@param TargetObject string
@@ -1604,6 +1609,13 @@ function CreateProjectileStrikeAt(Target, SkillID, CasterLevel) end
 ---@param CasterLevel integer
 function CreateProjectileStrikeAtPosition(X, Y, Z, SkillID, CasterLevel) end
 	
+---@param SkillID string
+---@param Source string
+---@param MinAngle number
+---@param MaxAngle number
+---@param Distance number
+function LaunchProjectileAtCone(SkillID, Source, MinAngle, MaxAngle, Distance) end
+	
 
 function AutoSave() end
 	
@@ -1974,8 +1986,8 @@ function TriggerRegisterForItems(Trigger) end
 function TriggerUnregisterForItems(Trigger) end
 	
 ---@param Trigger string
----@param AtmosphereUUID string
-function TriggerSetAtmosphere(Trigger, AtmosphereUUID) end
+---@param Atmospherestring string
+function TriggerSetAtmosphere(Trigger, Atmospherestring) end
 	
 ---@param Trigger string
 function TriggerResetAtmosphere(Trigger) end
@@ -2070,3 +2082,53 @@ function DialogSetVariableFixedStringForInstance(InstanceID, Variable, Value) en
 ---@param StringHandleValue string
 ---@param ReferenceStringValue string
 function DialogSetVariableTranslatedStringForInstance(InstanceID, Variable, StringHandleValue, ReferenceStringValue) end
+
+---@param object string
+---@param template string
+---@param replaceScripts boolean
+---@param replaceScale boolean
+---@param replaceStats boolean
+function TransformKeepIcon(object, template, replaceScripts, replaceScale, replaceStats) end
+
+---@param skill string
+---@param source string
+---@param angleVariationDegrees number
+---@param distance number
+function LaunchProjectileFromCharacterInCone(skill, source, angleVariationDegrees, distance) end
+	
+---@param Target string
+---@param Attacker string
+---@param Handle integer
+---@param Percentage number
+---@param IsHitHandle integer
+function LeaderLib_Hit_ReduceDamage(Target, Attacker, Handle, Percentage, IsHitHandle) end
+	
+---@param Target string
+---@param Attacker string
+---@param Handle integer
+---@param Percentage number
+---@param IsHitHandle integer
+function LeaderLib_Hit_IncreaseDamage(Target, Attacker, Handle, Percentage, IsHitHandle) end
+	
+---@param Target string
+---@param Defender string
+---@param Attacker string
+---@param Handle integer
+---@param Percentage number
+---@param IsHitHandle integer
+function LeaderLib_Hit_RedirectDamage(Target, Defender, Attacker, Handle, Percentage, IsHitHandle) end
+	
+---@param Character string
+---@param Slot integer
+---@param Skill string
+function LeaderLib_Ext_TrySetSkillSlot(Character, Slot, Skill) end
+	
+---@param Character string
+---@param Skill string
+function LeaderLib_Ext_RefreshSkill(Character, Skill) end
+	
+---@param Target string
+---@param Attacker string
+---@param Damage integer
+---@param Handle integer
+function LeaderLib_Ext_OnHit(Target, Attacker, Damage, Handle) end

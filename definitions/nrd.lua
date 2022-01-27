@@ -211,6 +211,9 @@ function NRD_ItemSetPermanentBoostAbility(Item, Ability, Points) end
 ---@param HasTalent integer
 function NRD_ItemSetPermanentBoostTalent(Item, Talent, HasTalent) end
 	
+---@param TemplateGuid string
+function NRD_ItemConstructBegin(TemplateGuid) end
+	
 ---@param Item string
 function NRD_ItemCloneBegin(Item) end
 	
@@ -221,6 +224,9 @@ function NRD_ItemCloneSetInt(Property, Value) end
 ---@param Property string
 ---@param Value string
 function NRD_ItemCloneSetString(Property, Value) end
+	
+
+function NRD_ItemCloneResetProgression() end
 	
 ---@param BoostType string
 ---@param Boost2 string
@@ -257,11 +263,11 @@ function NRD_CharacterIterateSkills(Character, Event) end
 ---@param Character string
 ---@param Item string
 ---@param Slot string
----@param CheckAP integer
+---@param ConsumeAP integer
 ---@param CheckRequirements integer
 ---@param UpdateVitality integer
 ---@param UseWeaponAnimType integer
-function NRD_CharacterEquipItem(Character, Item, Slot, CheckAP, CheckRequirements, UpdateVitality, UseWeaponAnimType) end
+function NRD_CharacterEquipItem(Character, Item, Slot, ConsumeAP, CheckRequirements, UpdateVitality, UseWeaponAnimType) end
 	
 ---@param Object string
 ---@param Flag integer
@@ -275,6 +281,11 @@ function NRD_CharacterSetCustomStat(Character, StatId, Value) end
 	
 ---@param BootstrapMods integer
 function NRD_LuaReset(BootstrapMods) end
+	
+---@param BootstrapMods integer
+---@param ResetServer integer
+---@param ResetClient integer
+function NRD_LuaReset(BootstrapMods, ResetServer, ResetClient) end
 	
 ---@param ModNameGuid string
 ---@param FileName string
@@ -367,6 +378,105 @@ function NRD_LuaCall(Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9)
 ---@param Arg9 string
 ---@param Arg10 string
 function NRD_LuaCall(Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10) end
+	
+---@param Mod string
+---@param Func string
+function NRD_ModCall(Mod, Func) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+function NRD_ModCall(Mod, Func, Arg1) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+function NRD_ModCall(Mod, Func, Arg1, Arg2) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+function NRD_ModCall(Mod, Func, Arg1, Arg2, Arg3) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+function NRD_ModCall(Mod, Func, Arg1, Arg2, Arg3, Arg4) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+function NRD_ModCall(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+function NRD_ModCall(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+function NRD_ModCall(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+function NRD_ModCall(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@param Arg9 string
+function NRD_ModCall(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@param Arg9 string
+---@param Arg10 string
+function NRD_ModCall(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10) end
 	
 ---@param Character string
 function NRD_BreakOnCharacter(Character) end
@@ -615,6 +725,11 @@ function NRD_StatGetType(StatsId) end
 ---@param Key string
 ---@return number Value
 function NRD_StatGetExtraData(Key) end
+	
+---@param Object string
+---@param StatusType string
+---@return integer HasStatus
+function NRD_ObjectHasStatusType(Object, StatusType) end
 	
 ---@param Object string
 ---@param StatusId string
@@ -881,9 +996,9 @@ function NRD_ItemClone() end
 	
 ---@param Character string
 ---@param Stat string
----@param IsBaseStat integer
+---@param ExcludeBoosts integer
 ---@return integer Value
-function NRD_CharacterGetComputedStat(Character, Stat, IsBaseStat) end
+function NRD_CharacterGetComputedStat(Character, Stat, ExcludeBoosts) end
 	
 ---@param Attacker string
 ---@param Target string
@@ -1636,6 +1751,765 @@ function NRD_LuaQuery10(Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Ar
 ---@return string Out4
 ---@return string Out5
 function NRD_LuaQuery10(Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10) end
+	
+---@param Mod string
+---@param Func string
+function NRD_ModQuery0(Mod, Func) end
+	
+---@param Mod string
+---@param Func string
+---@return string Out1
+function NRD_ModQuery0(Mod, Func) end
+	
+---@param Mod string
+---@param Func string
+---@return string Out1
+---@return string Out2
+function NRD_ModQuery0(Mod, Func) end
+	
+---@param Mod string
+---@param Func string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+function NRD_ModQuery0(Mod, Func) end
+	
+---@param Mod string
+---@param Func string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+function NRD_ModQuery0(Mod, Func) end
+	
+---@param Mod string
+---@param Func string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+---@return string Out5
+function NRD_ModQuery0(Mod, Func) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+function NRD_ModQuery1(Mod, Func, Arg1) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@return string Out1
+function NRD_ModQuery1(Mod, Func, Arg1) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@return string Out1
+---@return string Out2
+function NRD_ModQuery1(Mod, Func, Arg1) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+function NRD_ModQuery1(Mod, Func, Arg1) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+function NRD_ModQuery1(Mod, Func, Arg1) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+---@return string Out5
+function NRD_ModQuery1(Mod, Func, Arg1) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+function NRD_ModQuery2(Mod, Func, Arg1, Arg2) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@return string Out1
+function NRD_ModQuery2(Mod, Func, Arg1, Arg2) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@return string Out1
+---@return string Out2
+function NRD_ModQuery2(Mod, Func, Arg1, Arg2) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+function NRD_ModQuery2(Mod, Func, Arg1, Arg2) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+function NRD_ModQuery2(Mod, Func, Arg1, Arg2) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+---@return string Out5
+function NRD_ModQuery2(Mod, Func, Arg1, Arg2) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+function NRD_ModQuery3(Mod, Func, Arg1, Arg2, Arg3) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@return string Out1
+function NRD_ModQuery3(Mod, Func, Arg1, Arg2, Arg3) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@return string Out1
+---@return string Out2
+function NRD_ModQuery3(Mod, Func, Arg1, Arg2, Arg3) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+function NRD_ModQuery3(Mod, Func, Arg1, Arg2, Arg3) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+function NRD_ModQuery3(Mod, Func, Arg1, Arg2, Arg3) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+---@return string Out5
+function NRD_ModQuery3(Mod, Func, Arg1, Arg2, Arg3) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+function NRD_ModQuery4(Mod, Func, Arg1, Arg2, Arg3, Arg4) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@return string Out1
+function NRD_ModQuery4(Mod, Func, Arg1, Arg2, Arg3, Arg4) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@return string Out1
+---@return string Out2
+function NRD_ModQuery4(Mod, Func, Arg1, Arg2, Arg3, Arg4) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+function NRD_ModQuery4(Mod, Func, Arg1, Arg2, Arg3, Arg4) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+function NRD_ModQuery4(Mod, Func, Arg1, Arg2, Arg3, Arg4) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+---@return string Out5
+function NRD_ModQuery4(Mod, Func, Arg1, Arg2, Arg3, Arg4) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+function NRD_ModQuery5(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@return string Out1
+function NRD_ModQuery5(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@return string Out1
+---@return string Out2
+function NRD_ModQuery5(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+function NRD_ModQuery5(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+function NRD_ModQuery5(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+---@return string Out5
+function NRD_ModQuery5(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+function NRD_ModQuery6(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@return string Out1
+function NRD_ModQuery6(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@return string Out1
+---@return string Out2
+function NRD_ModQuery6(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+function NRD_ModQuery6(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+function NRD_ModQuery6(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+---@return string Out5
+function NRD_ModQuery6(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+function NRD_ModQuery7(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@return string Out1
+function NRD_ModQuery7(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@return string Out1
+---@return string Out2
+function NRD_ModQuery7(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+function NRD_ModQuery7(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+function NRD_ModQuery7(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+---@return string Out5
+function NRD_ModQuery7(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+function NRD_ModQuery8(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@return string Out1
+function NRD_ModQuery8(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@return string Out1
+---@return string Out2
+function NRD_ModQuery8(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+function NRD_ModQuery8(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+function NRD_ModQuery8(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+---@return string Out5
+function NRD_ModQuery8(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@param Arg9 string
+function NRD_ModQuery9(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@param Arg9 string
+---@return string Out1
+function NRD_ModQuery9(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@param Arg9 string
+---@return string Out1
+---@return string Out2
+function NRD_ModQuery9(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@param Arg9 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+function NRD_ModQuery9(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@param Arg9 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+function NRD_ModQuery9(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@param Arg9 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+---@return string Out5
+function NRD_ModQuery9(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@param Arg9 string
+---@param Arg10 string
+function NRD_ModQuery10(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@param Arg9 string
+---@param Arg10 string
+---@return string Out1
+function NRD_ModQuery10(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@param Arg9 string
+---@param Arg10 string
+---@return string Out1
+---@return string Out2
+function NRD_ModQuery10(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@param Arg9 string
+---@param Arg10 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+function NRD_ModQuery10(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@param Arg9 string
+---@param Arg10 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+function NRD_ModQuery10(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10) end
+	
+---@param Mod string
+---@param Func string
+---@param Arg1 string
+---@param Arg2 string
+---@param Arg3 string
+---@param Arg4 string
+---@param Arg5 string
+---@param Arg6 string
+---@param Arg7 string
+---@param Arg8 string
+---@param Arg9 string
+---@param Arg10 string
+---@return string Out1
+---@return string Out2
+---@return string Out3
+---@return string Out4
+---@return string Out5
+function NRD_ModQuery10(Mod, Func, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10) end
 	
 ---@param ModUuid string
 ---@return integer IsLoaded

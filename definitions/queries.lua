@@ -141,6 +141,17 @@ function CharacterCreateAtPosition(X, Y, Z, TemplateId, PlaySpawn) end
 ---@return string Created
 function TemporaryCharacterCreateAtPosition(X, Y, Z, TemplateId, PlaySpawn) end
 	
+---@param Caster string
+---@param SummonTemplateId string
+---@param X number
+---@param Y number
+---@param Z number
+---@param SummonLifetime number
+---@param SummonCharacterLevel integer
+---@param SummoningAbilityLevel integer
+---@return string SummonedCharacter
+function CharacterSummonAtPosition(Caster, SummonTemplateId, X, Y, Z, SummonLifetime, SummonCharacterLevel, SummoningAbilityLevel) end
+	
 ---@param X number
 ---@param Y number
 ---@param Z number
@@ -599,6 +610,10 @@ function ItemIsTorch(Item) end
 function ItemIsEquipable(Item) end
 	
 ---@param Item string
+---@return string SlotName
+function ItemGetEquipmentSlot(Item) end
+	
+---@param Item string
 ---@return integer Destroyed
 function ItemIsDestroyed(Item) end
 	
@@ -900,6 +915,12 @@ function QuestGetBroadcastLevel(Quest) end
 ---@param Update string
 ---@return integer Bool
 function QuestHasUpdate(Character, Quest, Update) end
+	
+---@param X number
+---@param Z number
+---@param Threshold number
+---@return integer Bool
+function IsShrouded(X, Z, Threshold) end
 	
 ---@param Target string
 ---@return string Surface
@@ -1241,6 +1262,11 @@ function GetFaction(Target) end
 function GetTemplate(Target) end
 	
 ---@param Character string
+---@param MinSafeDistance number
+---@return integer Bool
+function HasEnemyInRange(Character, MinSafeDistance) end
+	
+---@param Character string
 ---@param Restconsumable string
 ---@param PartyRadius number
 ---@param MinSafeDistance number
@@ -1419,6 +1445,18 @@ function GetTextEventParamReal(Number) end
 ---@param Number integer
 ---@return string Value
 function GetTextEventParamUUID(Number) end
+
+---@param item string
+---@return integer
+function ItemGetLevel(item) end
+	
+---@param SkillPrototype string
+---@return string SkillId
+function LeaderLib_Ext_QRY_GetSkillEntryName(SkillPrototype) end
+	
+---@param Version integer
+---@return string VersionString
+function LeaderLib_Ext_QRY_VersionIntegerToString(Version) end
 	
 ---@param Version string
 ---@return integer Major
@@ -1431,3 +1469,12 @@ function LeaderLib_Ext_QRY_StringToVersion(Version) end
 ---@param Fallback integer
 ---@return integer VersionInt
 function LeaderLib_Ext_QRY_VersionStringToVersionInteger(VersionString, Fallback) end
+	
+---@param Object string
+---@return integer Bool
+function LeaderLib_Ext_QRY_IsSneakingOrInvisible(Object) end
+	
+---@param Object string
+---@param StatusType string
+---@return integer Bool
+function LeaderLib_Ext_QRY_HasStatusType(Object, StatusType) end
